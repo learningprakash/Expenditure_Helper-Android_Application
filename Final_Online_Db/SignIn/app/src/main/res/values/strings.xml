@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Ex_Helper</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="LogIn">Log In</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">SIgn Up</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="Category">Category</string>
+    <string-array name="Categories">
+        <item>Groceries</item>
+        <item>Miscellaneous</item>
+        <item>Movies/Concerts</item>
+        <item>Restaurants</item>
+        <item>Travel</item>
+        <item>Utilities</item>
+    </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="transactionviewheading">Top 10 Transaction</string>
+    <string name="title_activity_view_data">ViewData</string>
+    <string name="title_activity_dailygraph">dailygraph</string>
+    <string name="title_activity_monthlygraph">monthlygraph</string>
+    <string name="title_activity_yearlygraph">yearlygraph</string>
+    <string name="title_activity_othergraph">othergraph</string>
+
+</resources>

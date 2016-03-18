@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mycompany.signin.Home">
+
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:targetApi="ice_cream_sandwich"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Amount"
+            android:id="@+id/amounttext"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_rowSpan="1"
+            android:layout_marginTop="44dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount"
+            android:hint="e.g 4.37"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:width="220dp"
+            android:inputType="text"
+            android:layout_column="3"
+            android:layout_columnSpan="4"
+            android:layout_rowSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_row="1"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Category"
+            android:id="@+id/categorytext"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/category"
+            android:layout_below="@+id/amount"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dropdown"
+            android:gravity="left"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_columnSpan="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView android:text="Please Enter your Transaction Data" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeheading"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnSpan="5" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="D"
+            android:id="@+id/datepicker"
+            android:onClick="showTime"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_marginTop="25dp"
+            android:width="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day"
+            android:width="35dp"
+            android:inputType="number"
+            android:hint="DD"
+            android:layout_below="@+id/category"
+            android:layout_toLeftOf="@+id/month"
+            android:layout_toStartOf="@+id/month"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month"
+            android:width="40dp"
+            android:inputType="number"
+            android:hint="MM"
+            android:layout_alignTop="@+id/year"
+            android:layout_toRightOf="@+id/day"
+            android:layout_alignRight="@+id/homeheading"
+            android:layout_alignEnd="@+id/homeheading"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            android:hint="YYYY"
+            android:width="55dp"
+            android:inputType="number"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/gridLayout"
+            android:layout_toEndOf="@+id/gridLayout"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/add"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/category"
+            android:layout_alignStart="@+id/category"
+            android:onClick="addtransaction"
+            android:layout_row="9"
+            android:layout_column="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View/Delete"
+            android:id="@+id/delete"
+            android:layout_alignBottom="@+id/add"
+            android:layout_alignRight="@+id/category"
+            android:layout_alignEnd="@+id/category"
+            android:onClick="viewdata"
+            android:layout_row="9"
+            android:layout_column="4"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp" />
+
+    </GridLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily"
+        android:id="@+id/daily"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:onClick="opendailygraph" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly"
+        android:id="@+id/monthly"
+        android:layout_alignTop="@+id/daily"
+        android:layout_toRightOf="@+id/daily"
+        android:layout_toEndOf="@+id/daily"
+        android:layout_marginLeft="5dp"
+        android:onClick="openmonthlygraph" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yearly"
+        android:id="@+id/yearly"
+        android:layout_alignBottom="@+id/monthly"
+        android:layout_toRightOf="@+id/monthly"
+        android:layout_toEndOf="@+id/monthly"
+        android:layout_marginLeft="5dp"
+        android:onClick="openyearlygraph" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:id="@+id/other"
+        android:layout_alignTop="@+id/yearly"
+        android:layout_toRightOf="@+id/yearly"
+        android:layout_toEndOf="@+id/yearly"
+        android:layout_marginLeft="5dp"
+        android:onClick="openotheroption" />
+
+
+</RelativeLayout>
